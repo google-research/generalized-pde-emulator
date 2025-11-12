@@ -23,7 +23,7 @@ The repository is organized as follows:
 To get started, clone the repository and install the package in editable mode:
 
 ```bash
-git clone https://github.com/RosellaZ/generalized-PDE-emulator.git
+git clone https://github.com/google-research/generalized-pde-emulator.git
 cd generalized-PDE-emulator
 pip install -e .
 ```
