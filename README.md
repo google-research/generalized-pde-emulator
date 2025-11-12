@@ -4,7 +4,7 @@ This repository contains the code for the paper "Generalizing PDE Emulation with
 
 ## Abstract
 
-Solving partial differential equations (PDEs) can be prohibitively expensive using traditional numerical methods. Deep learning-based surrogate models (emulators) typically specialize in a single PDE with fixed parameters. We present a framework for equation-aware emulation that generalizes to unseen PDEs, conditioning a neural model on a vector encoding representing the PDE's terms and their coefficients. We learn a mapping that generalizes to unseen physical systems. We present a baseline of four distinct modeling technqiues, trained on a family of 1D PDEs from the APEBench suite. Our approach achieves strong performance on parameter sets held out from the training distribution, with strong stability for rollout beyond the training timesteps, and generalization to an entirely unseen PDE.
+Solving partial differential equations (PDEs) can be prohibitively expensive using traditional numerical methods. Deep learning-based surrogate models typically specialize in a single PDE with fixed parameters. We present a framework for equation-aware emulation that generalizes to unseen PDEs, conditioning a neural model on a vector encoding representing the terms in a PDE  and their coefficients. We present a baseline of four distinct modeling technqiues, trained on a family of 1D PDEs from the APEBench suite. Our approach achieves strong performance on parameter sets held out from the training distribution, with strong stability for rollout beyond the training window, and generalization to an entirely unseen PDE. This work was developed as part of a broader effort exploring AI systems that automate the creation of expert-level empirical software for scorable scientific tasks, see [An AI system to help scientists write expert-level empirical software](https://arxiv.org/abs/2509.06503). The data and codebase are available at [https://github.com/google-research/generalized-pde-emulator](https://github.com/google-research/generalized-pde-emulator).
 
 ## Repository Structure
 
@@ -13,7 +13,7 @@ The repository is organized as follows:
 -   `pde_emulator/`: Contains the source code for the models, utility functions, and layers.
 -   `examples/`: Includes scripts to train the various models from scratch.
 -   `data/`:
-    -   `model_data/`: Contains the trained model weights and parameters from the paper (Please download these from Hugging Face).
+    -   `model_data/`: Contains the trained model weights and parameters from the paper (Please download these from Zenodo: https://doi.org/10.5281/zenodo.17593856).
     -   `figure_data/`: Contains the data required to reproduce the plots in the paper.
     -   `reproduce_the_figures.ipynb`: A notebook to reproduce the figures from the paper.
     -   `load_trained_models.ipynb`: A notebook demonstrating how to load and use the pre-trained models.
@@ -120,12 +120,20 @@ This work is built upon the following excellent libraries:
 We thank the authors of these libraries for their valuable contributions to the community.
 
 ## Citation
-This package was developed as part of the xxx paper (xxx) (Neurips workshop ML4PS 2025). If you find it useful for your research, please consider citing it:
+This package was developed as part of the paper: Generalizing PDE Emulation with Equation-Aware Neural Operators, accepted by NeurIPS workshop ML4PS 2025. If you find it useful for your research, please consider citing it:
 
 ```bibtex
-
+@inproceedings{
+anonymous2025generalizing,
+title={Generalizing {PDE} Emulation with Equation-Aware Neural Operators},
+author={Anonymous},
+booktitle={Machine Learning and the Physical Sciences Workshop @ NeurIPS 2025},
+year={2025},
+url={https://openreview.net/forum?id=e4QzheEePy}
+}
 ```
 
+For any questions, please email qianzezhu@g.harvard.edu.
 
 ## License
 
